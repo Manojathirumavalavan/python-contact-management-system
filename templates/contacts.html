@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Saved Contacts</title>
+    <div style="text-align: center; margin: 20px;">
+        <form action="/contacts" method="GET">
+            <input
+                type="text"
+                name="search"
+                placeholder="Search by name, email or phone"
+                value="{{ search }}"
+                style="width: 300px; max-width: 90%;
+                    padding: 12px; border: 1px solid #ccc;
+                    border-radius: 6px;"
+            >
+
+            <button type="submit">Search</button>
+
+            <a href="/contacts">Show All</a>
+        </form>
+    </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            padding: 30px 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .table-container {
+            max-width: 900px;
+            margin: 25px auto;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 14px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+        }
+
+        .edit-button, .delete-button {
+            display: inline-block;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .edit-button {
+            background: #2563eb;
+        }
+
+        .delete-button {
+            background: #dc2626;
+        }
+
+        .add-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Saved Contacts</h1>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact[0] }}</td>
+                    <td>{{ contact[1] }}</td>
+                    <td>{{ contact[2] }}</td>
+                    <td>{{ contact[3] }}</td>
+
+                    <td>
+                        <a
+                            class="edit-button"
+                            href="/edit/{{ contact[0] }}"
+                        >Edit</a>
+
+                        <form
+                            action="/delete/{{ contact[0] }}"
+                            method="POST"
+                            style="display: inline;"
+                            onsubmit="return confirm('Are you sure you want to delete this contact?');"
+                        >
+                            <button
+                                type="submit"
+                                class="delete-button"
+                            >Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="5" style="text-align:center;">
+                        No contacts saved yet.
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="center">
+        <a href="/" class="add-button">Add New Contact</a>
+    </div>
+
+</body>
+</html>
