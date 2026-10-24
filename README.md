@@ -164,7 +164,4 @@ Python | Flask | Web Development
 No license has been specified yet. An appropriate open-source license can be added if the project is intended for public reuse and redistribution.
 
 
-## 📄 License
-
-This project is available for educational and portfolio purposes. Add a suitable open-source license if you intend to permit reuse and redistribution.
 
