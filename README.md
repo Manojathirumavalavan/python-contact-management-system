@@ -1,19 +1,19 @@
 # 📇 Contact Manager Web Application
 
-A responsive contact management web application built using Python, Flask, and SQLite. It allows users to organize contact information through a clean dashboard with search, editing, deletion, pagination, and CSV export functionality.
+A responsive contact management web application built using **Python, Flask, and SQLite**. It helps users organize contact information through a clean dashboard with search, editing, deletion, pagination, dashboard statistics, and CSV export.
 
 ## 🚀 Features
 
 * **Add Contacts:** Save names, email addresses, and phone numbers.
 * **View Contacts:** Display saved contacts in a structured table.
 * **Edit Contacts:** Update existing contact information.
-* **Delete Contacts:** Remove contacts with a confirmation prompt.
-* **Search Contacts:** Find contacts by name, email, or phone number.
-* **Form Validation:** Validate email formats and phone number inputs.
+* **Delete Contacts:** Remove contacts after a confirmation prompt.
+* **Search Contacts:** Find contacts by name, email address, or phone number.
+* **Form Validation:** Validate required fields and basic email and phone number formats.
 * **Duplicate Detection:** Prevent duplicate email addresses.
 * **Dashboard Statistics:** Display total contacts, contacts with email addresses, and recent contacts.
-* **Contact Creation Dates:** Track when contacts were added.
-* **Pagination:** Display contacts across multiple pages.
+* **Contact Creation Dates:** Display when contacts were added, when a timestamp is available.
+* **Pagination:** Browse contacts across multiple pages.
 * **CSV Export:** Download contact information as a CSV file.
 * **Responsive Interface:** Use the dashboard on desktop and mobile devices.
 
@@ -30,18 +30,25 @@ A responsive contact management web application built using Python, Flask, and S
 ## 📂 Project Structure
 
 ```text
-Contact-Manager/
+python-contact-management-system/
 │
 ├── app.py
-├── contacts.db
 ├── requirements.txt
 ├── README.md
+├── .gitignore
 │
-└── templates/
-    ├── index.html
-    ├── contacts.html
-    └── edit.html
+├── templates/
+│   ├── index.html
+│   ├── contacts.html
+│   └── edit.html
+│
+└── screenshots/
+    ├── add-contact.png
+    ├── dashboard.png
+    └── pagination.png
 ```
+
+**Note:** The `screenshots` folder should contain your actual application screenshots. Avoid uploading a database containing personal contact information to a public repository.
 
 ## ⚙️ Installation and Setup
 
@@ -51,19 +58,19 @@ Contact-Manager/
 * pip
 * Git (optional)
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Manojathirumavalavan/python-contact-management-system.git
 ```
 
-### 2. Open the project directory
+### 2. Open the Project Directory
 
 ```bash
-cd Contact-Manager
+cd python-contact-management-system
 ```
 
-### 3. Create a virtual environment
+### 3. Create a Virtual Environment
 
 ```bash
 python -m venv venv
@@ -75,34 +82,29 @@ Activate it on Windows:
 venv\Scripts\activate
 ```
 
-### 4. Install dependencies
+On macOS or Linux:
 
-If a `requirements.txt` file is available:
+```bash
+source venv/bin/activate
+```
+
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Otherwise, install Flask:
-
-```bash
-pip install Flask
-```
-
-### 5. Run the application
+### 5. Run the Application
 
 ```bash
 python app.py
 ```
 
-### 6. Open the application
+### 6. Open the Application
 
-Visit:
+Open your browser and visit:
 
-```text
 http://127.0.0.1:5000
-```
-
 
 ## 📸 Application Screenshots
 
@@ -114,7 +116,7 @@ The application provides a simple form for entering contact names, email address
 
 ### 2. Dashboard
 
-The dashboard displays contact statistics, including total contacts, contacts with email addresses, and contacts added in the last seven days.
+The dashboard displays statistics, including total contacts, contacts with email addresses, and contacts added in the last seven days.
 
 ![Contact Manager Dashboard](screenshots/dashboard.png)
 
@@ -123,13 +125,6 @@ The dashboard displays contact statistics, including total contacts, contacts wi
 Users can search contacts, view creation dates, edit or delete records, and navigate between pages.
 
 ![Contact List and Pagination](screenshots/pagination.png)
-
-
-Example Markdown:
-
-```markdown
-![Contact Manager Dashboard](screenshots/dashboard.png)
-```
 
 ## 💡 What I Learned
 
@@ -140,17 +135,20 @@ Building this project helped me practise:
 * Implementing CRUD operations.
 * Writing SQL queries for searching and pagination.
 * Validating user input.
+* Detecting duplicate email addresses.
 * Exporting database records to CSV.
 * Designing responsive interfaces using HTML and CSS.
 * Organizing and documenting a Python project.
+* Managing source code using Git and GitHub.
 
 ## 🔮 Future Improvements
 
-* Contact import from CSV.
-* Sorting contacts by name and creation date.
-* Automated database backups.
-* Improved error handling and application security.
-* Additional accessibility improvements.
+* Import contacts from CSV.
+* Sort contacts by name, email, and creation date.
+* Add database backup and restore functionality.
+* Improve automated testing and error handling.
+* Strengthen application security.
+* Improve accessibility and mobile usability.
 
 ## 👩‍💻 Developer
 
@@ -158,9 +156,13 @@ Building this project helped me practise:
 
 Python | Flask | Web Development
 
-GitHub: Add your GitHub profile link here.
+* **GitHub Repository:** https://github.com/Manojathirumavalavan/python-contact-management-system
+* **GitHub Profile:** https://github.com/Manojathirumavalavan
 
-Portfolio: Add your portfolio link here.
+## 📄 License
+
+No license has been specified yet. An appropriate open-source license can be added if the project is intended for public reuse and redistribution.
+
 
 ## 📄 License
 
