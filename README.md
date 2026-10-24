@@ -103,17 +103,27 @@ Visit:
 http://127.0.0.1:5000
 ```
 
-## 📸 Screenshots
 
-Add screenshots of your actual running application here.
+## 📸 Application Screenshots
 
-Recommended screenshots:
+### 1. Add Contact Form
 
-1. Contact Manager dashboard
-2. Add Contact form
-3. Search results
-4. Pagination
-5. CSV export result
+The application provides a simple form for entering contact names, email addresses, and phone numbers.
+
+![Add Contact Form](screenshots/add-contact.png)
+
+### 2. Dashboard
+
+The dashboard displays contact statistics, including total contacts, contacts with email addresses, and contacts added in the last seven days.
+
+![Contact Manager Dashboard](screenshots/dashboard.png)
+
+### 3. Contact List and Pagination
+
+Users can search contacts, view creation dates, edit or delete records, and navigate between pages.
+
+![Contact List and Pagination](screenshots/pagination.png)
+
 
 Example Markdown:
 
